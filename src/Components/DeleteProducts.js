@@ -1,8 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const DeleteProducts = ({ deleteProducts, setDeleteProduct, refetch }) => {
-    const { _id, productName } = deleteProducts;
+
+const DeleteProducts = ({ deleteProduct, setDeleteProduct, refetch }) => {
+    const { _id, productName } = deleteProduct;
+    
 
     const handleDelete = () => {
         fetch(`http://localhost:5000/addedProduct/${_id}`, {
